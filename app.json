@@ -1,0 +1,28 @@
+{
+  "id": "75fddcc0-1592-4513-b223-f060046e8f01",
+  "name": "RJ Seeds Core",
+  "publisher": "RJ Bio Seeds",
+  "version": "1.0.0.0",
+  "brief": "Seed industry extension for RJ Bio Seeds",
+  "description": "Seed production, quality control, processing and sales processes for RJ Bio Seeds Private Limited.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "25.0.0.0",
+  "application": "25.0.0.0",
+  "idRanges": [
+    { "from": 50000, "to": 50999 }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "14.0",
+  "target": "Cloud",
+  "features": [ "NoImplicitWith" ]
+}
