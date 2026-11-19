@@ -17,6 +17,12 @@ table 50000 "RJS Season"
                 if not Regex.IsMatch(Code, '^[KRS][0-9]{2}$') then
                     Error('Season should start with K, R, or S and last two digits of year');
 
+                if Format(Rec.Code).StartsWith('K') then
+                    Rec."Season Type" := Enum::"RJS Season Type"::Kharif
+                else if Format(Rec.Code).StartsWith('R') then
+                    Rec."Season Type" := Enum::"RJS Season Type"::Rabi
+                else if Format(Rec.Code).StartsWith('S') then
+                    Rec."Season Type" := Enum::"RJS Season Type"::Summer;
             end;
         }
 
@@ -28,11 +34,18 @@ table 50000 "RJS Season"
         field(3; "Season Type"; Enum "RJS Season Type")
         {
             DataClassification = CustomerContent;
+            // Editable = false;
         }
 
         field(4; "Season Year"; Integer)
         {
             DataClassification = CustomerContent;
+            Editable = false;
+
+            trigger OnValidate()
+            begin
+
+            end;
         }
 
         field(5; "Starting Date"; Date)
